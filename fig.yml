@@ -1,0 +1,7 @@
+gulp:
+  build: .
+  ports:
+    - "8080:8080"
+  volumes:
+    - "jade:/data/jade"
+    - "dist:/data/dist"
