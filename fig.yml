@@ -4,4 +4,5 @@ gulp:
     - "8080:8080"
   volumes:
     - "jade:/data/jade"
+    - "coffee:/data/coffee"
     - "dist:/data/dist"
