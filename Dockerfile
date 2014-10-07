@@ -16,9 +16,9 @@ ADD gulpfile.js /data/gulpfile.js
 ADD gulpfile.coffee /data/gulpfile.coffee
 ADD bower.json /data/bower.json
 
-RUN mkdir /data/jade
-RUN mkdir /data/coffee
-RUN mkdir /data/dist
+VOLUME ["/data/jade"]
+VOLUME ["/data/coffee"]
+VOLUME ["/data/dist"]
 
 EXPOSE 8080
 
@@ -26,3 +26,4 @@ RUN bower --allow-root install
 RUN gulp bower
 
 CMD ["gulp"]
+
